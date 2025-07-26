@@ -1,0 +1,226 @@
+<div class="container" id="container">
+  <div class="box" data-id="languages">
+    <div class="box-content">Lenguajes de Programación</div>
+    <div class="details">
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /> Java</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> Python</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /> JavaScript</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /> TypeScript</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" /> SQL</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" /> Kotlin</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box" data-id="devops">
+    <div class="box-content">DevOps & Automatización</div>
+    <div class="details">
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /> Docker</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" /> Kubernetes</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" /> Jenkins</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible" /> Ansible</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" /> Terraform</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vagrant/vagrant-original.svg" alt="Vagrant" /> Vagrant</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box" data-id="cybersecurity">
+    <div class="box-content">Ciberseguridad</div>
+    <div class="details">
+    <ul>
+        <li>Bastionado de sistemas ⮕ (Linux, Windows)</li>
+    </ul>
+    <ul>
+        <li>Pentesting ⮕ (Kali, Metasploit))</li>
+    </ul>
+    <ul>
+        <li>Análisis forense ⮕ (Autopsy, Volatility)</li>
+    </ul>
+    <ul>
+        <li>Monitorización y Detección ⮕ (Snort, Suricata)</li>
+    </ul>
+    <ul>
+        <li>SIEM ⮕ (ELK Stack)</li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="box" data-id="frameworks">
+    <div class="box-content">Frameworks y Librerías</div>
+    <div class="details">
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /> Angular</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /> React</li>
+        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/astro.svg" alt="Astro" style="width:24px; height:24px; margin-right:0.5rem; filter:invert(80%) sepia(70%) saturate(500%) hue-rotate(150deg);" /> Astro</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg" alt="Hibernate" /> Hibernate</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" /> Spring</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    gap: 1rem;
+    height: 300px;
+    max-width: 100%;
+  }
+
+  .box {
+    flex: 1;
+    background: rgba(17, 17, 17, 0.8);
+    color: #00ffd5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 1px solid #00ffcc33;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    user-select: none;
+    box-shadow: 0 0 8px #00ffcc44, inset 0 0 16px #00ffcc22;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .box:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
+  background: rgba(0, 20, 20, 0.85);
+  color: #ffffff;
+}
+
+  .box-content {
+    display: block;
+    width: 100%;
+    transition: text-align 0.4s ease;
+  }
+
+  .box.selected {
+    flex: 1 1 100%;
+    font-size: 1.5rem;
+    cursor: default;
+    box-shadow: 0 0 16px #00ffccaa, inset 0 0 24px #00ffcc88;
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .box.selected .box-content {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .box.hidden {
+    display: none;
+  }
+
+  .back-arrow {
+    background-color: rgba(0, 255, 204, 0.9);
+    color: #0a0a0a;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.6rem;
+    line-height: 1;
+    box-shadow: 0 0 10px #00ffccdd;
+    z-index: 999;
+    margin-bottom: 1rem;
+  }
+
+  .back-arrow:hover {
+    background-color: rgba(0, 255, 204, 1);
+  }
+
+  .details {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+    width: 100%;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #00ffd5;
+  }
+
+  .box.selected .details {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .details ul {
+    padding-left: 1rem;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    list-style: none;
+  }
+
+  .details ul li {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .details ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    filter: drop-shadow(0 0 2px #00ffccaa);
+    flex-shrink: 0;
+  }
+</style>
+
+<script>
+  const container = document.getElementById('container');
+  const boxes = container.querySelectorAll('.box');
+
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      if (box.classList.contains('selected')) {
+        // Si ya está seleccionada, se revierte
+        resetBoxes();
+      } else {
+        // Se selecciona y oculta el resto
+        boxes.forEach(b => {
+          if (b === box) {
+            b.classList.add('selected');
+          } else {
+            b.classList.add('hidden');
+          }
+        });
+      }
+    });
+  });
+
+  function resetBoxes() {
+    boxes.forEach(b => {
+      b.classList.remove('selected', 'hidden');
+    });
+  }
+</script>

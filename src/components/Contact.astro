@@ -1,0 +1,92 @@
+---
+---
+
+<form action="https://formspree.io/f/mrblqrdo" method="POST">
+  <label for="name">Nombre</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Correo electrónico</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="message">Mensaje</label>
+  <textarea id="message" name="message" rows="5" placeholder="Escríbeme, estoy esperando..." required></textarea>
+
+  <!-- Campo honeypot oculto para evitar bots -->
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Desactiva el captcha de Formspree si no lo quieres -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Redirección tras el envío exitoso -->
+  <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+  <button type="submit" class="submit-button">Enviar</button>
+</form>
+
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    height: 450px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  label {
+    color: #00ffcccc;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    background: #111;
+    border: 2px solid #00ffcc;
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    color: #e0f0ff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #00ccaa;
+    box-shadow: 0 0 8px #00ccaa;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .submit-button {
+    background: transparent;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    color: #00ffcc;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 12px #00ffcc44;
+  }
+
+  .submit-button:hover {
+    background-color: #00ccaa;
+    color: #000;
+    box-shadow: 0 0 18px #00ccaa;
+  }
+
+  #form-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #00ffcc;
+    min-height: 1.5em;
+  }
+</style>

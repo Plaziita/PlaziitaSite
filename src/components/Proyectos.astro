@@ -1,0 +1,258 @@
+<section id="carousel">
+  <button id="prev">&#10094;</button>
+
+  <div id="projects">
+    <article class="project">
+      <a href="https://github.com/Plaziita/Intercromo" class="neon-button" target="_blank">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5C5.6.5.5 5.6.5 
+              12c0 5.1 3.3 9.4 7.9 
+              10.9.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 
+              1.1.1 1.7 1.1 1.7 1.1 1 
+              1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.6-1.4-5.6-6.1 
+              0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.6.1-3.2 
+              0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 
+              0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 
+              3.2.8.9 1.2 2 1.2 3.2 0 
+              4.7-2.9 5.8-5.6 6.1.4.4.8 1 .8 2v3c0 
+              .3.2.7.8.6 4.6-1.5 7.9-5.8 
+              7.9-10.9C23.5 5.6 18.4.5 12 .5z"/>
+          </svg>
+          Intercromo
+        </a>
+      <div class="image-carousel">
+        <button class="img-nav left">&#10094;</button>
+        <img src="/intercromo/splash.jfif" class="carousel-img active" />
+        <img src="/intercromo/home.jfif" class="carousel-img" />
+        <img src="/intercromo/perfil.jfif" class="carousel-img" />
+        <img src="/intercromo/mis-cromos.jfif" class="carousel-img" />
+        <img src="/intercromo/upload.jfif" class="carousel-img" />
+        <button class="img-nav right">&#10095;</button>
+      </div>
+      <p>Red social móvil en Kotlin + Firebase para el intercambio de cromos usando arquitectura MVVM.</p>
+    </article>
+
+    <article class="project">
+      <a href="https://github.com/Luucasrsz/PopFilm" class="neon-button" target="_blank">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5C5.6.5.5 5.6.5 
+              12c0 5.1 3.3 9.4 7.9 
+              10.9.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 
+              1.1.1 1.7 1.1 1.7 1.1 1 
+              1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.6-1.4-5.6-6.1 
+              0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.6.1-3.2 
+              0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 
+              0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 
+              3.2.8.9 1.2 2 1.2 3.2 0 
+              4.7-2.9 5.8-5.6 6.1.4.4.8 1 .8 2v3c0 
+              .3.2.7.8.6 4.6-1.5 7.9-5.8 
+              7.9-10.9C23.5 5.6 18.4.5 12 .5z"/>
+          </svg>
+          Popfilm
+        </a>
+      <div class="image-carousel">
+        <button class="img-nav left">&#10094;</button>
+        <img src="/popfilm/login.png" class="carousel-img active" />
+        <button class="img-nav right">&#10095;</button>
+      </div>
+      <p>Almacen de peliculas desarrollado con HTML, CSS, JavaScript en el front-end y Python en el back-end, utilizando MariaDB como base de datos.</p>
+    </article>
+  </div>
+
+  <button id="next">&#10095;</button>
+</section>
+
+<style>
+
+  .neon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background: transparent;
+  color: #00ffccb6;
+  font-weight: bold;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  text-decoration: none; /* 💥 Esto quita el subrayado */
+  box-shadow: 0 0 8px #00ffcc44, 0 0 16px #00ffcc22 inset;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; /* 🖱️ Esto lo hace parecer clickeable */
+}
+
+.neon-button:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
+  background: rgba(0, 20, 20, 0.85);
+  color: #ffffff;
+}
+
+.neon-button svg {
+  fill: currentColor;
+}
+  /* 🌌 Carrusel de proyectos completo */
+#carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: rgba(17, 17, 17, 0.8);
+    border: 1px solid #00ffcc33;
+    border-radius: 10px;
+    padding: 1.2rem;
+    color: #00ffccb6;
+    box-shadow: 0 0 8px #00ffcc44, inset 0 0 12px #00ffcc22;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease;
+}
+
+/* 🧱 Contenedor de proyectos */
+#projects {
+  flex: 1;
+}
+
+/* 🎯 Proyectos individuales */
+#projects .project {
+  display: none;
+  color: #00ffcc;
+  text-align: center;
+}
+
+#projects .project.active {
+  display: block;
+}
+
+/* 📸 Carrusel de imágenes por proyecto */
+.image-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+/* 🖼️ Imágenes del proyecto */
+.carousel-img {
+  display: none;
+  width: 300px;
+  height: 500px;
+  border-radius: 12px;
+  border: 2px solid #00ffcc66;
+  object-fit: cover;
+  box-shadow: 0 0 10px #00ffcc22;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+/* 🧭 Flechas para navegar entre imágenes */
+.img-nav {
+  background: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px #00ffcc44;
+  z-index: 2;
+}
+
+.img-nav:hover {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+/* ⬅️➡️ Flechas laterales para cambiar de proyecto */
+button#prev,
+button#next {
+  font-size: 2rem;
+  background: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: fit-content;
+  box-shadow: 0 0 12px #00ffcc33;
+}
+
+button#prev:hover,
+button#next:hover {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentProject = 0;
+    const projects = document.querySelectorAll(".project");
+
+    function showProject(index: number) {
+      projects.forEach(p => p.classList.remove("active"));
+      currentProject = index;
+      projects[currentProject].classList.add("active");
+
+      const imgs = projects[currentProject].querySelectorAll(".carousel-img");
+      imgs.forEach(img => img.classList.remove("active"));
+      if (imgs.length > 0) imgs[0].classList.add("active");
+    }
+
+    const prevBtn = document.getElementById("prev");
+    if (prevBtn) {
+      prevBtn.onclick = () => {
+        currentProject = (currentProject - 1 + projects.length) % projects.length;
+        showProject(currentProject);
+      };
+    }
+
+
+    const nextBtn = document.getElementById("next");
+    if (nextBtn) {
+      nextBtn.onclick = () => {
+        currentProject = (currentProject + 1) % projects.length;
+        showProject(currentProject);
+      };
+    }
+
+
+    // Flechas individuales por imagen
+    projects.forEach((p, idx) => {
+      const images = p.querySelectorAll(".carousel-img");
+      const leftBtn = p.querySelector(".img-nav.left");
+      const rightBtn = p.querySelector(".img-nav.right");
+
+      if (leftBtn && rightBtn) {
+        let localImageIndex = 0;
+
+        const updateImage = () => {
+          images.forEach(img => img.classList.remove("active"));
+          images[localImageIndex].classList.add("active");
+        };
+
+        leftBtn.addEventListener("click", () => {
+          localImageIndex = (localImageIndex - 1 + images.length) % images.length;
+          updateImage();
+        });
+
+        rightBtn.addEventListener("click", () => {
+          localImageIndex = (localImageIndex + 1) % images.length;
+          updateImage();
+        });
+      }
+    });
+
+    // Inicialización
+    showProject(0);
+  });
+</script>

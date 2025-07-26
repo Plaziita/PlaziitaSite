@@ -1,0 +1,131 @@
+<header>
+  <div class="header-content">
+    <img src="/perfil.png" alt="Mario Plaza Diaz" class="profile-pic" />
+    <div>
+      <h1>Mario Plaza Díaz</h1>
+      <h2>Software Developer & Cybersecurity Specialist</h2>
+      <p class="bio">
+        Soy un chico trabajador, apasionado por la ciberseguridad y la programación. Estoy en constante búsqueda de proyectos que despierten mi curiosidad, me permitan seguir desarrollándome profesionalmente y en los que pueda aportar y crecer junto a un equipo unido y colaborativo.
+      </p>
+
+      <div class="button-group">
+        <a href="/PlazaDiazMario_CV.pdf" class="neon-button" download>
+          📄 Descargar CV
+        </a>
+
+        <a href="https://www.linkedin.com/in/mario-plaza-0786702b0/" class="neon-button" target="_blank">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 
+              2.761 2.239 5 5 5h14c2.761 0 5-2.239 
+              5-5v-14c0-2.761-2.239-5-5-5zm-11 
+              19h-3v-10h3v10zm-1.5-11.268c-.966 
+              0-1.75-.804-1.75-1.732s.784-1.732 
+              1.75-1.732 1.75.804 
+              1.75 1.732-.784 1.732-1.75 
+              1.732zm13.5 11.268h-3v-5.604c0-3.368-4-3.112-4 
+              0v5.604h-3v-10h3v1.412c1.396-2.586 
+              7-2.777 7 2.476v6.112z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+        <a href="https://github.com/Plaziita" class="neon-button" target="_blank">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5C5.6.5.5 5.6.5 
+              12c0 5.1 3.3 9.4 7.9 
+              10.9.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 
+              1.1.1 1.7 1.1 1.7 1.1 1 
+              1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.6-1.4-5.6-6.1 
+              0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.6.1-3.2 
+              0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 
+              0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 
+              3.2.8.9 1.2 2 1.2 3.2 0 
+              4.7-2.9 5.8-5.6 6.1.4.4.8 1 .8 2v3c0 
+              .3.2.7.8.6 4.6-1.5 7.9-5.8 
+              7.9-10.9C23.5 5.6 18.4.5 12 .5z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+header {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  padding: 2rem;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 12px #00ffcc66;
+  object-fit: cover;
+}
+
+h1 {
+  color: #00ffcc;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2 {
+  color: #00ffcc76;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.bio {
+  max-width: 800px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #cce;
+}
+
+.button-group {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.neon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background: transparent;
+  color: #00ffccb6;
+  font-weight: bold;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  text-decoration: none; /* 💥 Esto quita el subrayado */
+  box-shadow: 0 0 8px #00ffcc44, 0 0 16px #00ffcc22 inset;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; /* 🖱️ Esto lo hace parecer clickeable */
+}
+
+.neon-button:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
+  background: rgba(0, 20, 20, 0.85);
+  color: #ffffff;
+}
+
+.neon-button svg {
+  fill: currentColor;
+}
+</style>

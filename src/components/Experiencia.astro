@@ -1,0 +1,122 @@
+<div class="experience-section">
+  <div class="experience-card">
+    <div class="card-header">
+      <h2>Desarrollador Web</h2>
+      <div class="tech-icons">
+        <img src="https://cdn.simpleicons.org/angular/00ffcc" alt="Angular" />
+        <img src="https://cdn.simpleicons.org/express/00ffcc" alt="ExpressJS" />
+        <img src="https://cdn.simpleicons.org/mongodb/00ffcc" alt="MongoDB" />
+        <img src="https://cdn.simpleicons.org/mocha/00ffcc" alt="Mocha" />
+        <img src="https://cdn.simpleicons.org/chai/00ffcc" alt="Chai" />
+      </div>
+    </div>
+    <p class="company">Ingeniería y Prevención de Riesgos S.L.</p>
+    <p class="dates">Marzo 2024 – Septiembre 2024</p>
+    <ul>
+      <li>Desarrollo de aplicación web utilizando Angular, ExpressJS, MongoDB y NodeJS</li>
+      <li>Implementación de pruebas unitarias con Mocha y Chai</li>
+      <li>Colaboración con el equipo para definir requisitos y optimizar funcionalidades</li>
+    </ul>
+  </div>
+
+  <div class="experience-card">
+    <div class="card-header">
+      <h2>Administrador de Sistemas</h2>
+      <div class="tech-icons">
+        <img src="https://cdn.simpleicons.org/apple/00ffcc" alt="Apple" />
+        <img src="https://cdn.simpleicons.org/samsung/00ffcc" alt="Samsung logo" />        
+        <img src="https://cdn.simpleicons.org/linux/00ffcc" alt="Linux" />
+      </div>
+    </div>
+    <p class="company">Colegio Jara</p>
+    <p class="dates">Marzo 2022 – Junio 2022</p>
+    <ul>
+      <li>Monitorización de sistemas utilizando Knox y Apple JAMF</li>
+      <li>Montaje, configuración y administración de redes LAN</li>
+      <li>Soporte técnico y mantenimiento preventivo de infraestructura TI</li>
+    </ul>
+  </div>
+</div>
+
+
+<style>
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background: rgba(17, 17, 17, 0.85);
+  border: 1px solid #00ffcc33;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #00ffcc44, inset 0 0 14px #00ffcc22;
+  color: #00ffccbb;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
+  background: rgba(0, 20, 20, 0.85);
+  color: #ffffff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #00ffd5;
+  flex-shrink: 0;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: flex-end;
+}
+
+.tech-icons img {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 2px #00ffccaa);
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
+}
+
+.company {
+  font-weight: bold;
+  color: #00ffc288;
+}
+
+.dates {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #00ffcc88;
+}
+
+.experience-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.experience-card li {
+  margin-bottom: 0.4rem;
+}
+</style>
