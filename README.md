@@ -1,46 +1,26 @@
-# Astro Starter Kit: Basics
+# 🌐 PlaziitaSite
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Bienvenido a mi portafolio! Aquí presento algunos de mis proyectos más destacados.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tecnologías utilizadas
 
-## 🚀 Project Structure
+- **Astro** para el renderizado estático moderno y eficiente del sitio.
+- **HTML, CSS, JavaScript** para estructura, estilos y comportamiento.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🎯 Proyectos destacados
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+### 🔄 Intercromo
+Red social móvil desarrollada en **Kotlin** con backend en **Firebase**. Permite a los usuarios intercambiar cromos de manera eficiente y social.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+🔗 [Ver en GitHub](https://github.com/Plaziita/Intercromo)
 
-## 🧞 Commands
+### 🎬 PopFilm
+Almacén de películas hecho con un stack completo: **HTML, CSS, JS (frontend)** y **Python + MariaDB (backend)**. Ideal para practicar CRUD y relaciones de base de datos.
 
-All commands are run from the root of the project, from a terminal:
+🔗 [Ver en GitHub](https://github.com/Luucasrsz/PopFilm)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📬 Contacto
 
-## 👀 Want to learn more?
+El formulario de contacto está completamente funcional gracias a [Formspree](https://formspree.io/), lo que me permite recibir mensajes sin necesidad de un servidor backend.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+📫 Puedes contactarme directamente desde el [formulario en el sitio](#).
