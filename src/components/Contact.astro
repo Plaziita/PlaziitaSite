@@ -11,13 +11,10 @@
   <label for="message">Mensaje</label>
   <textarea id="message" name="message" rows="5" placeholder="Escríbeme, estoy esperando..." required></textarea>
 
-  <!-- Campo honeypot oculto para evitar bots -->
   <input type="text" name="_honey" style="display:none">
 
-  <!-- Desactiva el captcha de Formspree si no lo quieres -->
   <input type="hidden" name="_captcha" value="false">
 
-  <!-- Redirección tras el envío exitoso -->
   <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
 
   <button type="submit" class="submit-button">Enviar</button>

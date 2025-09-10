@@ -17,20 +17,17 @@ import Footer from '../components/Footer.astro';
     <title>Mario Plaza Diaz | Software developer</title>
     <link rel="stylesheet" href="/global.css" />
     <style>
-      /* Ocultar todo el contenido inicialmente */
       .main-wrapper {
         opacity: 0;
         transition: opacity 3.5s ease-in-out;
-        pointer-events: none; /* para evitar clicks cuando invisible */
+        pointer-events: none; 
       }
 
-      /* Mostrar el contenido */
       .main-wrapper.visible {
         opacity: 1;
         pointer-events: auto;
       }
 
-      /* Además ocultamos las secciones, se mostrarán con js */
       .content-section.hidden {
         display: none;
       }
