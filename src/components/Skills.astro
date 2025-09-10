@@ -30,21 +30,13 @@
   <div class="box" data-id="cybersecurity">
     <div class="box-content">Ciberseguridad</div>
     <div class="details">
-    <ul>
+      <ul>
         <li>Bastionado de sistemas ⮕ (Linux, Windows)</li>
-    </ul>
-    <ul>
-        <li>Pentesting ⮕ (Kali, Metasploit))</li>
-    </ul>
-    <ul>
+        <li>Pentesting ⮕ (Kali, Metasploit)</li>
         <li>Análisis forense ⮕ (Autopsy, Volatility)</li>
-    </ul>
-    <ul>
         <li>Monitorización y Detección ⮕ (Snort, Suricata)</li>
-    </ul>
-    <ul>
         <li>SIEM ⮕ (ELK Stack)</li>
-    </ul>
+      </ul>
     </div>
   </div>
 
@@ -63,20 +55,23 @@
 </div>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
 
+  /* Contenedor principal */
   .container {
     display: flex;
+    flex-wrap: wrap; /* permite apilar en móviles */
     gap: 1rem;
-    height: 300px;
     max-width: 100%;
+    padding: 1rem;
+    height: auto;
   }
 
+  /* Cajas */
   .box {
-    flex: 1;
-    background: rgba(17, 17, 17, 0.8);
+    flex: 1 1 250px; /* ancho mínimo 250px */
+    min-height: 200px;
+    background: rgba(17,17,17,0.8);
     color: #00ffd5;
     font-weight: bold;
     font-size: 1.2rem;
@@ -97,11 +92,11 @@
   }
 
   .box:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
-  background: rgba(0, 20, 20, 0.85);
-  color: #ffffff;
-}
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
+    background: rgba(0,20,20,0.85);
+    color: #ffffff;
+  }
 
   .box-content {
     display: block;
@@ -114,7 +109,7 @@
     font-size: 1.5rem;
     cursor: default;
     box-shadow: 0 0 16px #00ffccaa, inset 0 0 24px #00ffcc88;
-    background: rgba(17, 17, 17, 0.95);
+    background: rgba(17,17,17,0.95);
     backdrop-filter: blur(8px);
     padding: 20px;
     align-items: flex-start;
@@ -127,33 +122,7 @@
     margin-bottom: 1rem;
   }
 
-  .box.hidden {
-    display: none;
-  }
-
-  .back-arrow {
-    background-color: rgba(0, 255, 204, 0.9);
-    color: #0a0a0a;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bold;
-    user-select: none;
-    transition: background-color 0.3s ease;
-    font-size: 1.6rem;
-    line-height: 1;
-    box-shadow: 0 0 10px #00ffccdd;
-    z-index: 999;
-    margin-bottom: 1rem;
-  }
-
-  .back-arrow:hover {
-    background-color: rgba(0, 255, 204, 1);
-  }
+  .box.hidden { display: none; }
 
   .details {
     opacity: 0;
@@ -162,7 +131,7 @@
     display: none;
     width: 100%;
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #00ffd5;
   }
 
@@ -173,12 +142,13 @@
   }
 
   .details ul {
-    padding-left: 1rem;
+    padding-left: 0;
     margin: 0;
     display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
     list-style: none;
+    overflow-x: auto;
   }
 
   .details ul li {
@@ -194,6 +164,37 @@
     filter: drop-shadow(0 0 2px #00ffccaa);
     flex-shrink: 0;
   }
+
+  /* ===== Media Queries ===== */
+  @media (max-width: 768px) {
+    .box {
+      flex: 1 1 100%;
+      min-height: auto;
+      font-size: 1.1rem;
+    }
+    .details ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .details ul li {
+      white-space: normal;
+    }
+    .details ul li img {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .box {
+      padding: 12px;
+      font-size: 1rem;
+    }
+    .details ul {
+      gap: 0.3rem;
+    }
+  }
 </style>
 
 <script>
@@ -203,24 +204,17 @@
   boxes.forEach(box => {
     box.addEventListener('click', () => {
       if (box.classList.contains('selected')) {
-        // Si ya está seleccionada, se revierte
         resetBoxes();
       } else {
-        // Se selecciona y oculta el resto
         boxes.forEach(b => {
-          if (b === box) {
-            b.classList.add('selected');
-          } else {
-            b.classList.add('hidden');
-          }
+          if (b === box) b.classList.add('selected');
+          else b.classList.add('hidden');
         });
       }
     });
   });
 
   function resetBoxes() {
-    boxes.forEach(b => {
-      b.classList.remove('selected', 'hidden');
-    });
+    boxes.forEach(b => b.classList.remove('selected', 'hidden'));
   }
 </script>

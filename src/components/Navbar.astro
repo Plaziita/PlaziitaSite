@@ -1,33 +1,89 @@
+<!-- Agregar Font Awesome CDN en tu <head> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<!-- Navbar con texto por defecto -->
 <nav class="navbar">
-  <a href="#projects">Proyectos</a>
-  <a href="#experience">Experiencia</a>
-  <a href="#skills">Competencias</a>
-  <a href="#certs">Certificaciones</a>
-  <a href="#contact">Contacto</a>
+  <a href="#projects" class="text-link">Proyectos</a>
+  <a href="#experience" class="text-link">Experiencia</a>
+  <a href="#skills" class="text-link">Competencias</a>
+  <a href="#certs" class="text-link">Certificaciones</a>
+  <a href="#contact" class="text-link">Contacto</a>
+
+  <!-- Íconos ocultos por defecto -->
+  <a href="#projects" class="icon-link"><i class="fas fa-folder-open"></i></a>
+  <a href="#experience" class="icon-link"><i class="fas fa-briefcase"></i></a>
+  <a href="#skills" class="icon-link"><i class="fas fa-lightbulb"></i></a>
+  <a href="#certs" class="icon-link"><i class="fas fa-certificate"></i></a>
+  <a href="#contact" class="icon-link"><i class="fas fa-envelope"></i></a>
 </nav>
 
 <style>
-  .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    background: #111;
-  }
-  .navbar a {
+/* Contenedor principal */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: #111;
+}
+
+/* Links de texto */
+.navbar .text-link {
   color: #00ffcc;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  position: relative;
+  font-size: 1rem;
 }
 
-.navbar a:hover {
+.navbar .text-link:hover {
   transform: translateY(-4px) scale(1.05);
   background-color: rgba(0, 255, 204, 0.1);
   box-shadow: 0 0 12px #00ffcc88, inset 0 0 8px #00ffcc33;
   color: #ccfff5;
+}
+
+/* Links de íconos */
+.navbar .icon-link {
+  display: none; /* ocultos por defecto */
+  color: #00ffcc;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar .icon-link:hover {
+  transform: translateY(-4px) scale(1.2);
+  background-color: rgba(0, 255, 204, 0.1);
+  box-shadow: 0 0 12px #00ffcc88, inset 0 0 8px #00ffcc33;
+  color: #ccfff5;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row; /* horizontal en móvil */
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar .text-link {
+    display: none; /* ocultar texto en móvil */
+  }
+
+  .navbar .icon-link {
+    display: flex; /* mostrar íconos */
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>

@@ -40,12 +40,15 @@
 
 
 <style>
+/* Contenedor principal */
 .experience-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* En desktop puedes cambiar a row si quieres */
   gap: 1.5rem;
+  padding: 1rem;
 }
 
+/* Tarjetas de experiencia */
 .experience-card {
   background: rgba(17, 17, 17, 0.85);
   border: 1px solid #00ffcc33;
@@ -55,8 +58,11 @@
   color: #00ffccbb;
   backdrop-filter: blur(6px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Para que se ajuste al ancho del contenedor */
+  box-sizing: border-box;
 }
 
+/* Hover */
 .experience-card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 0 18px #00ffccaa, inset 0 0 24px #00ffcc55;
@@ -64,12 +70,14 @@
   color: #ffffff;
 }
 
+/* Header de la tarjeta */
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
+  flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
 }
 
 .card-header h2 {
@@ -79,6 +87,7 @@
   flex-shrink: 0;
 }
 
+/* Iconos de tecnología */
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +107,7 @@
   transform: scale(1.1);
 }
 
+/* Empresa y fechas */
 .company {
   font-weight: bold;
   color: #00ffc288;
@@ -110,6 +120,7 @@
   color: #00ffcc88;
 }
 
+/* Lista de responsabilidades */
 .experience-card ul {
   padding-left: 1.2rem;
   margin: 0;
@@ -119,4 +130,36 @@
 .experience-card li {
   margin-bottom: 0.4rem;
 }
+
+/* ===== Media Queries para móviles ===== */
+@media (max-width: 768px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start; /* iconos debajo del título */
+  }
+  
+  .tech-icons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .tech-icons img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .experience-card {
+    padding: 1rem;
+  }
+  
+  .experience-card ul {
+    padding-left: 1rem;
+  }
+}
+
 </style>
